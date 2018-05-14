@@ -1,2 +1,5 @@
-<h1>Name :<%= @post.name%></h1>
-<h2>Content :<%= @post.content%></h2>
+<h1>All Posts</h1>
+<% @posts.each do |post|%>
+    <p>Name :<%= @posts.name%></p>
+    <p>Content :<%= @post.content%></p>
+<%end%>
