@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-
+      erb :index
   end
 
   get '/posts/new' do
@@ -17,11 +17,9 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts' do
-      binding.pry
-      @post = Post.create('name' => params[:name], 'content' => params[:content])
-       binding.pry
-
+     @post = Post.create('name' => params[:name], 'content' => params[:content])
       erb :posts
+      binding.pry
   end
 
 end
